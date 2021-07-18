@@ -1,9 +1,9 @@
 Intension of this repo is to make zappa deployment agnostic of your machine  
-Lambda are are deployed on docker based on lambdaci in aws, we are building stuff on that
+Lambda are  deployed on docker based on lambdaci in aws, we are building stuff on that
 
 Steps to achieve this
 
-1) this will create a docker image name zappa on your machine
+1) this will create a docker image name zappashell on your machine
 
 ```bash
 docker build -t zappashell -f zappa-dockerfile .
@@ -24,7 +24,7 @@ what it will do is it will mount current directory and aws credential directory 
 zappashell
 ```
 
-4) install virtual env(one time for one repo) 
+4) install virtual environment env(one time for one repo, this is add venv directory in your directory, add that in your gitignore and zappa_settings.json)
 ```bash
 virtualenv venv
 source venv/bin/activate
