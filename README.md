@@ -12,7 +12,7 @@ docker build -t zappashell -f zappa-dockerfile .
 2) now add this to your .bash_profile
 
 ```bash
-alias zappashell='docker run -ti -e AWS_PROFILE=$AWS_PROFILE -v $(pwd):/var/task -v ~/.aws/:/root/.aws  --rm zappashell bash'
+alias zappashell='[[ -f zappa_settings.json ]] && docker run -ti -e AWS_PROFILE=dataorc -v $(pwd):/var/task -v ~/.aws/:/root/.aws  --rm zappashell bash'
 ```
 
 what it will do is it will mount current directory and aws credential directory into the docker
