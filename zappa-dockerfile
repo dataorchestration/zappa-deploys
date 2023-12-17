@@ -1,5 +1,5 @@
-FROM lambci/lambda:python3.7
-from lambci/lambda:build-python3.7
+FROM lambci/lambda:python3.8
+from lambci/lambda:build-python3.8
 
 ARG region
 
@@ -14,7 +14,7 @@ WORKDIR /var/task
 
 RUN pip3 install virtualenv
 
-RUN python3.7 -m venv /var/venv && \
+RUN python3.8 -m venv /var/venv && \
     source /var/venv/bin/activate && \
     pip install -U pip && \
     deactivate
